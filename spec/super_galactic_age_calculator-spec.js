@@ -37,5 +37,11 @@ describe('', function() {
     expect(char.yearLeft("2/19/1993", 100, "jupiter")).toEqual(889.5);
   });
 
+  it('Tells you how many years you have left to live if a user has already surpassed the average life expectancy', function() {
+    expect(char.yearLeft("2/19/2000", 16, "mercury")).toEqual(-0.48);
+    expect(char.yearLeft("2/19/2000", 16, "venus")).toEqual(-1.24);
+    expect(char.yearLeft("2/19/2000", 16, "mars")).toEqual(-3.76);
+    expect(char.yearLeft("2/19/2000", 16, "jupiter")).toEqual(-23.72);
+  });
 
 });

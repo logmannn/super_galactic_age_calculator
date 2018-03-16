@@ -62,11 +62,20 @@ export class Super_galactic_age_calculator {
 
   // Determine how many years a user has left to live on each planet
   yearLeft(birthday, expectedAge, planet){
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1;
+    let yyyy = today.getFullYear();
 
     let age = this.getAge(birthday);
     let yearsLeft = expectedAge - age;
     let birthdate = new Date(birthday);
-    let deathYear = (birthdate.getFullYear()+yearsLeft);
+    let deathYear = ((birthdate.getFullYear())+yearsLeft);
+
+    if (yyyy > deathYear) {
+      let yearsLivedOver = (yyyy-deathYear)-age;
+      yearsLeft=0-yearsLivedOver;
+    }
 
     if (planet == "mercury") {deathYear = yearsLeft*.24}
     else if (planet == "venus") {deathYear = yearsLeft*.62}
@@ -74,7 +83,6 @@ export class Super_galactic_age_calculator {
     else if (planet == "jupiter") {deathYear = yearsLeft*11.86}
 
     return deathYear;
-
   }
 
 }
