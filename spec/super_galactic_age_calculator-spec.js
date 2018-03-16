@@ -27,4 +27,8 @@ describe('', function() {
     expect(char.otherPlanetAge("2/19/1993", "venus")).toEqual(40);
   });
 
+  it('Returns someone who is still alive\'s age in Mars years', function() {
+    expect(char.otherPlanetAge("2/19/1993", "mars")).toEqual(13);
+  });
+
 });
