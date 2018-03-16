@@ -23,11 +23,30 @@ export class Super_galactic_age_calculator {
     return total_days;
   }
 
-  mercuryYearAge(birthday){
-    //daysBetweenDates(birthday);
-    // get how many days they have been alive
-    // if a mercury year is .24 of a year then their years take up 87.6 days
-    // so the formula is 87.6/days alive (assuming their year is always 87.6 days a year)
+  //assuming they are still alive
+  otherPlanetAge(birthday, planet){
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1;
+    let planetYear = 87.6;
+
+    let yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    }
+    if(mm<10){
+        mm='0'+mm;
+    }
+    if (planet == "mercury") {planetYear = 87.6}
+
+    today = mm+'/'+dd+'/'+yyyy;
+
+    let day_start = new Date(today);
+    let day_end = new Date(birthday);
+    let total_days = Math.floor((day_start - day_end) / (1000 * 60 * 60 * 24));
+
+    let mercuryYears = Math.floor(total_days/planetYear);
+    return mercuryYears;
   }
 
   //
