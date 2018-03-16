@@ -8,6 +8,15 @@ export class Super_galactic_age_calculator {
     let yearsToSeconds = ageInYears * 31536000;
     return yearsToSeconds;
   }
+
+  secondsBetweenDates(date1, date2) {
+    let nextDate = Math.floor(Date.parse(date2) / 1000);
+    let previousDate = Math.floor(Date.parse(date1) / 1000);
+    let seconds = nextDate - previousDate;
+    return seconds;
+  }
+
+
   //
   // addExperience(amount) {
   //   this.experience += amount;
