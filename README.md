@@ -3,16 +3,15 @@
 <h1>Instructions:</h1>
 
 <h2>1. Clone</h2>
-<code>$ cd desktop
-$ git clone https://github.com/logmannn/super_galactic_age_calculator/
-</code>
+<code>$ cd desktop</code><br><br>
+<code>$ git clone https://github.com/logmannn/super_galactic_age_calculator/</code>
 
 <h2>2. Setup Script</h2>
 
-<code>
-  cd super_galactic_age_calculator<br>
-  npm install
-</code>
+
+  <code>cd super_galactic_age_calculator</code><br>
+  <code>npm install</code>
+
 
 <h2>3. Run Script</h2>
 
