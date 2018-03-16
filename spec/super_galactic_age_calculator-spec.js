@@ -19,16 +19,23 @@ describe('', function() {
     expect(char.daysBetweenDates("2/19/1993", "3/16/2018")).toEqual(9155);
   });
 
-  it('Returns someone who is still alive\'s age in Mercury years', function() {
+  it('Returns someone who is still alive\'s age in other planetary years', function() {
     expect(char.otherPlanetAge("2/19/1993", "mercury")).toEqual(104);
-  });
-
-  it('Returns someone who is still alive\'s age in Venus years', function() {
     expect(char.otherPlanetAge("2/19/1993", "venus")).toEqual(40);
+    expect(char.otherPlanetAge("2/19/1993", "mars")).toEqual(13);
+    expect(char.otherPlanetAge("2/19/1993", "jupiter")).toEqual(2);
   });
 
-  it('Returns someone who is still alive\'s age in Mars years', function() {
-    expect(char.otherPlanetAge("2/19/1993", "mars")).toEqual(13);
+  it('Tells you how old you are based on your birthdate', function() {
+    expect(char.getAge("2/19/1993")).toEqual(25);
   });
+
+  it('Determine how many years a user has left to live on each planet', function() {
+    expect(char.yearLeft("2/19/1993", 100, "mercury")).toEqual(18);
+    expect(char.yearLeft("2/19/1993", 100, "venus")).toEqual(46.5);
+    expect(char.yearLeft("2/19/1993", 100, "mars")).toEqual(141);
+    expect(char.yearLeft("2/19/1993", 100, "jupiter")).toEqual(889.5);
+  });
+
 
 });
