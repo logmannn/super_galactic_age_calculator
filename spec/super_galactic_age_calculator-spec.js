@@ -1,6 +1,6 @@
 import { Super_galactic_age_calculator } from './../src/super_galactic_age_calculator.js';
 
-describe('', function() {
+describe('Super_galactic_age_calculator', function() {
   let char;
 
   beforeEach(function() {

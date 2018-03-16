@@ -1,9 +1,5 @@
 export class Super_galactic_age_calculator {
 
-  // constructor(stats) {
-  //   this.name = stats[0];
-  // }
-
   yearsToSeconds(ageInYears) {
     let yearsToSeconds = ageInYears * 31536000;
     return yearsToSeconds;
@@ -11,7 +7,7 @@ export class Super_galactic_age_calculator {
 
   getAge(dateString){
     let today = new Date();
-    let birthDate = new Date(dateString);
+    const birthDate = new Date(dateString);
     let age = today.getFullYear() - birthDate.getFullYear();
     let m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
@@ -69,7 +65,7 @@ export class Super_galactic_age_calculator {
 
     let age = this.getAge(birthday);
     let yearsLeft = expectedAge - age;
-    let birthdate = new Date(birthday);
+    const birthdate = new Date(birthday);
     let deathYear = ((birthdate.getFullYear())+yearsLeft);
 
     if (yyyy > deathYear) {
