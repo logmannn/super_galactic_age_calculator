@@ -37,7 +37,11 @@ export class Super_galactic_age_calculator {
     if(mm<10){
         mm='0'+mm;
     }
+    //
     if (planet == "mercury") {planetYear = 87.6}
+    else if (planet == "venus") {planetYear = 226.3}
+    else if (planet == "mars") {planetYear = 686.2}
+    else if (planet == "jupiter") {planetYear = 4328.9}
 
     today = mm+'/'+dd+'/'+yyyy;
 
