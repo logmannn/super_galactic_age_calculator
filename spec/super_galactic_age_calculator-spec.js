@@ -8,6 +8,6 @@ describe('', function() {
   });
 
   it('Does', function() {
-    expect(char.yearsToSeconds(7)).toEqual(31536000);
+    expect(char.yearsToSeconds(7)).toEqual(220752000);
   });
 });

@@ -3,11 +3,10 @@ export class Super_galactic_age_calculator {
   // constructor(stats) {
   //   this.name = stats[0];
   // }
-  //
-  // let this.condition = vitality;
-  //
-  yearsToSeconds(ageInYears) {
 
+  yearsToSeconds(ageInYears) {
+    let yearsToSeconds = ageInYears * 31536000;
+    return yearsToSeconds;
   }
   //
   // addExperience(amount) {
