@@ -15,4 +15,8 @@ describe('', function() {
     expect(char.secondsBetweenDates("2/19/1993", "03/15/2018")).toEqual(790988400);
   });
 
+  it('Returns the days between two dates)', function() {
+    expect(char.daysBetweenDates("2/19/1993", "3/16/2018")).toEqual(9155);
+  });
+
 });

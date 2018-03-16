@@ -10,12 +10,25 @@ export class Super_galactic_age_calculator {
   }
 
   secondsBetweenDates(date1, date2) {
-    let nextDate = Math.floor(Date.parse(date2) / 1000);
     let previousDate = Math.floor(Date.parse(date1) / 1000);
+    let nextDate = Math.floor(Date.parse(date2) / 1000);
     let seconds = nextDate - previousDate;
     return seconds;
   }
 
+  daysBetweenDates(date1, date2) {
+    let day_start = new Date(date1);
+    let day_end = new Date(date2);
+    let total_days = Math.floor((day_end - day_start) / (1000 * 60 * 60 * 24));
+    return total_days;
+  }
+
+  mercuryYearAge(birthday){
+    //daysBetweenDates(birthday);
+    // get how many days they have been alive
+    // if a mercury year is .24 of a year then their years take up 87.6 days
+    // so the formula is 87.6/days alive (assuming their year is always 87.6 days a year)
+  }
 
   //
   // addExperience(amount) {
